@@ -18,6 +18,8 @@ spec:
         task: monitoring
         k8s-app: heapster
     spec:
+      nodeSelector:
+        beta.kubernetes.io/os: linux
       serviceAccountName: heapster
       containers:
       - name: heapster
